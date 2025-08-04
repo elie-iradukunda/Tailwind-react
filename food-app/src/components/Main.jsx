@@ -1,9 +1,11 @@
 import React from 'react';
 import d1 from '../assets/d1.jpeg';
 import d2 from '../assets/d2.jpeg';
+import FoodList from './Listfood';
 
 const Main = () => {
   return (
+    <>
     <main className="bg-green-400 py-10 ">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 bg-blue-100 rounded-2xl shadow-md p-6  mt-11">
         <div className="text-center md:text-left ">
@@ -44,6 +46,9 @@ const Main = () => {
         </div>
       </div>
     </main>
+
+    <FoodList/>
+    </>
   );
 };
 

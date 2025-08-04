@@ -1,7 +1,9 @@
 import React from 'react';
 import '../app.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+
   return (
     <nav className="bg-gray-400 w-full shadow-2xl fixed">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center ">
