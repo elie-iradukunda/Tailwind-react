@@ -1,12 +1,12 @@
 import React from 'react';
-import d1 from '../assets/d1.jpeg';
-import d2 from '../assets/d2.jpeg';
+import d1 from '../assets/d2.jpeg';
+import d2 from '../assets/d3.jpeg';
 import FoodList from './Listfood';
 
 const Main = () => {
   return (
     <>
-    <main className="bg-green-400 py-10 ">
+    <main className="bg-green-400 py-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 bg-blue-100 rounded-2xl shadow-md p-6  mt-11">
         <div className="text-center md:text-left ">
           <h1 className="text-3xl font-bold mb-4 text-gray-800">
@@ -35,12 +35,12 @@ const Main = () => {
 
 
       <div>
-        <div className="flex flex-nowrap overflow-x-scroll gap-4 rounded-3xl scrollbar-hide ">
-            <img src={d1} alt=""  className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105" />
-             <img src={d1} alt=""  className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105" />
-              <img src={d1} alt="" className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105" />
-               <img src={d1} alt=""  className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
-                <img src={d1} alt=""  className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
+        <div className="flex flex-nowrap overflow-x-scroll gap-4 rounded-3xl scrollbar-hide overflow-y-hidden mt-5">
+            <img src={d1} alt=""  className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105 animate-spin" />
+             <img src={d1} alt=""  className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105 animate-bounce" />
+              <img src={d1} alt="" className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105 animate-ping" />
+               <img src={d1} alt=""  className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105 animate-pulse"/>
+                <img src={d1} alt=""  className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105 animate-spin"/>
                  <img src={d1} alt=""  className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105"  />
                   <img src={d1} alt=""  className="min-w-[250px] md:min-w-[300px] rounded-xl object-cover transition-transform duration-300 ease-in-out hover:scale-105"/>
         </div>
