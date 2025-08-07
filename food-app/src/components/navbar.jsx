@@ -1,11 +1,13 @@
 import React from 'react';
 import '../app.css';
 import { Link } from 'react-router-dom';
+import Landingpage from './Landingpage';
 
 const Navbar = () => {
 
   return (
-    <nav className="bg-gray-400 w-full shadow-2xs fixed animate-pulse">
+    <>
+    {/* <nav className="bg-gray-400 w-full shadow-2xs fixed animate-pulse">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center ">
         <h2 className="text-2xl font-bold text-white">Elie Logo</h2>
         <ul className="flex gap-6 items-center">
@@ -19,7 +21,11 @@ const Navbar = () => {
           <div class="dark:bg-gray-800 bg-white">Dark Mode</div>
         </ul>
       </div>
-    </nav>
+
+      
+    </nav> */}
+    <Landingpage/>
+    </>
   );
 };
 

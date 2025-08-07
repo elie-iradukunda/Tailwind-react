@@ -1,6 +1,7 @@
 import pool from '../db.js'
 import express from 'express';
 const router=express.Router()
+import validateFood from '../middlewares/foodcontroler.js';
 
 router.get('/getallFood', async (req, res) => {
   try {
@@ -14,7 +15,7 @@ router.get('/getallFood', async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
-router.post('/addfood',async(req,res)=>{
+router.post('/addfood',validateFood,async(req,res)=>{
         
         const {title,description}=req.body
     try {
@@ -32,6 +33,30 @@ router.post('/addfood',async(req,res)=>{
     res.status(500).json({ message: 'Server error' });
     }
 })
+
+router.delete('/deleteByid/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const result = await pool.query(
+      'DELETE FROM foods WHERE id = $1 RETURNING *',
+      [id]
+    );
+
+    if (result.rowCount === 0) {
+      return res.status(404).json({ message: 'Food not found' });
+    }
+
+    res.status(200).json({
+      message: 'Food deleted successfully',
+      deletedFood: result.rows[0],
+    });
+  } catch (err) {
+    console.error('Delete Error:', err.message);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 
 
 export default router
